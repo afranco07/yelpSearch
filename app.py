@@ -1,5 +1,4 @@
 from flask import Flask, jsonify, request
-#from config_keys import YELP_API_KEY
 from flask_cors import CORS
 import requests
 import os
