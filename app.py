@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from config_keys import YELP_API_KEY
+#from config_keys import YELP_API_KEY
 from flask_cors import CORS
 import requests
 import os
@@ -20,7 +20,7 @@ def get_restaurants():
     radius = request.json['radius']
     URL = f'https://api.yelp.com/v3/businesses/search?latitude={latitude}&longitude={longitude}&radius={radius}'
     HEADERS = {
-        'Authorization': f'Bearer {YELP_API_KEY}',
+        'Authorization': f'Bearer {YELP_KEY}',
         'Access-Control-Allow-Origin': '*'
     }
     r = requests.get(url=URL, headers=HEADERS)
