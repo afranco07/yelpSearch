@@ -2,6 +2,9 @@ from flask import Flask, jsonify, request
 from config_keys import YELP_API_KEY
 from flask_cors import CORS
 import requests
+import os
+
+YELP_KEY = os.environ['YELP_API_KEY']
 
 app = Flask(__name__)
 CORS(app)
