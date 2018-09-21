@@ -17,7 +17,8 @@ def get_restaurants():
     latitude = request.json['latitude']
     longitude = request.json['longitude']
     radius = request.json['radius']
-    URL = f'https://api.yelp.com/v3/businesses/search?latitude={latitude}&longitude={longitude}&radius={radius}'
+    price = request.json['price']
+    URL = f'https://api.yelp.com/v3/businesses/search?latitude={latitude}&longitude={longitude}&radius={radius}&price={price}'
     HEADERS = {
         'Authorization': f'Bearer {YELP_KEY}',
         'Access-Control-Allow-Origin': '*'
